@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/core/configs/constants.dart';
 import 'package:news_app/core/network/remote/api_manager.dart';
 import 'package:news_app/core/widgets/custom_background_widget.dart';
 import 'package:news_app/features/layout/widgets/tab_item.dart';
@@ -7,7 +8,13 @@ import 'package:news_app/models/category_model.dart';
 class CategoryView extends StatefulWidget {
   final CategoryModel categoryModel;
   final String categoryID;
-  const CategoryView({super.key, required this.categoryModel, required this.categoryID});
+  final String searchQuery;
+  const CategoryView({
+    super.key,
+    required this.categoryModel,
+    required this.categoryID,
+    required this.searchQuery,
+  });
 
   @override
   State<CategoryView> createState() => _CategoryViewState();
@@ -22,7 +29,9 @@ class _CategoryViewState extends State<CategoryView> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
-              child: CircularProgressIndicator(),
+              child: CircularProgressIndicator(
+                color: Constants.primaryColor,
+              ),
             );
           }
           if (snapshot.hasError) {
@@ -31,10 +40,11 @@ class _CategoryViewState extends State<CategoryView> {
             );
           }
           var sourceList = snapshot.data?.sources ?? [];
-          return TabItem(sources: sourceList);
-
+          return TabItem(
+            sources: sourceList,
+            searchQuery: widget.searchQuery,
+          );
         },
-
       ),
     );
   }

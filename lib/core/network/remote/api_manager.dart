@@ -7,9 +7,8 @@ import 'package:news_app/models/NewsDataModel.dart';
 import 'package:news_app/models/SourceResponse.dart';
 
 class ApiManager {
-
   static Future<SourceResponse> getSources(String categoryID) async {
-    Map<String,dynamic> queryParam ={
+    Map<String, dynamic> queryParam = {
       'category': categoryID,
     };
     Uri url = Uri.https(
@@ -34,22 +33,18 @@ class ApiManager {
       // then throw an exception.
       throw Exception('Failed to load album');
     }
-
   }
-  static Future<NewsDataModel> getNewsData(String sourceID)async{
-    Uri url = Uri.https(
-      Constants.baseURl,
-      EndPoints.newsDataEndPoints,
-      {
-        "sources": sourceID,
-      }
 
-    );
+  static Future<NewsDataModel> getNewsData(
+      String sourceID, String searchQuery) async {
+    Uri url = Uri.https(Constants.baseURl, EndPoints.newsDataEndPoints, {
+      "sources": sourceID,
+      "q": searchQuery,
+    });
     http.Response response = await http.get(url, headers: {
-      AppString.apiKeyHeader : Constants.apiKeyValue,
+      AppString.apiKeyHeader: Constants.apiKeyValue,
     });
     var json = jsonDecode(response.body);
     return NewsDataModel.fromJson(json);
-
   }
 }

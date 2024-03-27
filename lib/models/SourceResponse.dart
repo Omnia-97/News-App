@@ -1,7 +1,8 @@
- class SourceResponse {
+class SourceResponse {
   SourceResponse({
-      this.status,
-      this.sources,});
+    this.status,
+    this.sources,
+  });
 
   SourceResponse.fromJson(dynamic json) {
     status = json['status'];
@@ -23,18 +24,18 @@
     }
     return map;
   }
-
 }
 
 class Sources {
   Sources({
-      this.id, 
-      this.name, 
-      this.description, 
-      this.url, 
-      this.category, 
-      this.language, 
-      this.country,});
+    this.id,
+    this.name,
+    this.description,
+    this.url,
+    this.category,
+    this.language,
+    this.country,
+  });
 
   Sources.fromJson(dynamic json) {
     id = json['id'];
@@ -64,5 +65,4 @@ class Sources {
     map['country'] = country;
     return map;
   }
-
 }

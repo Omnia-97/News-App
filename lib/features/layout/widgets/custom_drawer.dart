@@ -3,10 +3,13 @@ import 'package:news_app/core/configs/constants.dart';
 
 class CustomDrawer extends StatelessWidget {
   final Function onDrawerClicked;
-  static const int categoryID=1;
-  static const int settingsID=2;
+  static const int categoryID = 1;
+  static const int settingsID = 2;
 
-  const CustomDrawer({super.key, required this.onDrawerClicked, });
+  const CustomDrawer({
+    super.key,
+    required this.onDrawerClicked,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -26,22 +29,22 @@ class CustomDrawer extends StatelessWidget {
                   .copyWith(color: Colors.white),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           ),
           InkWell(
-            onTap: (){
+            onTap: () {
               onDrawerClicked(categoryID);
             },
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  ImageIcon(
+                  const ImageIcon(
                     AssetImage('assets/icons/ic_list.png'),
                     color: Color(0xFF303030),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                   Text(
@@ -53,19 +56,18 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: (){
+            onTap: () {
               onDrawerClicked(settingsID);
             },
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.settings,
-
                     color: Color(0xFF303030),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                   Text(

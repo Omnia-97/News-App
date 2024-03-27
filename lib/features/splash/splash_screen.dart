@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(const Duration(seconds: 3), () {
-      navigatorKey.currentState! .pushReplacementNamed(PageRouteName.home);
+      navigatorKey.currentState!.pushReplacementNamed(PageRouteName.home);
     });
     super.initState();
   }
@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     var mediaQuery = MediaQuery.of(context).size;
-     return Scaffold(
+    return Scaffold(
       body: Image(
         image: const AssetImage(
           'assets/images/splash_screen.png',
