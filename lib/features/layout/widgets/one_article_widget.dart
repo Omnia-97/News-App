@@ -4,6 +4,7 @@ import 'package:news_app/core/configs/constants.dart';
 import 'package:news_app/core/configs/pages_route_name.dart';
 import 'package:news_app/main.dart';
 import 'package:news_app/models/NewsDataModel.dart';
+import 'package:timeago/timeago.dart' as timeago;
 
 class OneArticle extends StatelessWidget {
   final Articles article;
@@ -51,6 +52,14 @@ class OneArticle extends StatelessWidget {
               article.title ?? "",
               style: Constants.theme.textTheme.displayMedium,
             ),
+            Container(
+              alignment: Alignment.centerRight,
+              child: Text(
+                timeago.format(DateTime.parse(article.publishedAt ?? "")),
+                textAlign: TextAlign.end,
+                style: Constants.theme.textTheme.headlineSmall,
+              ),
+            )
           ],
         ),
       ),

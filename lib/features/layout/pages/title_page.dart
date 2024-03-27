@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:news_app/core/widgets/custom_background_widget.dart';
 import 'package:news_app/models/NewsDataModel.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import 'package:timeago/timeago.dart' as timeago;
 import '../../../core/configs/constants.dart';
 
 class TitlePage extends StatelessWidget {
@@ -62,6 +62,16 @@ class TitlePage extends StatelessWidget {
                       title.title ?? "",
                       style: Constants.theme.textTheme.displayMedium,
                     ),
+                    Container(
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        timeago.format(
+                          DateTime.parse(title.publishedAt ?? ""),
+                        ),
+                        textAlign: TextAlign.end,
+                        style: Constants.theme.textTheme.headlineSmall,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -72,7 +82,6 @@ class TitlePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Container(
                   width: 383,
-                  height: 370,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(25),

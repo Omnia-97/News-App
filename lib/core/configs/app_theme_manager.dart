@@ -21,35 +21,41 @@ class AppThemeManager {
       size: 35,
     ),
     textTheme: TextTheme(
-        titleLarge: GoogleFonts.exo(
-            fontSize: 22, fontWeight: FontWeight.w500, color: Colors.white),
-        bodyLarge: GoogleFonts.poppins(
-          fontSize: 22,
-          fontWeight: FontWeight.w700,
-        ),
-        bodySmall: GoogleFonts.exo(
-          fontSize: 14,
-          fontWeight: FontWeight.w400,
-        ),
-        displayLarge: GoogleFonts.poppins(
-          fontSize: 24,
-          fontWeight: FontWeight.w700,
-          color: const Color(0xFF303030),
-        ),
-        displayMedium: GoogleFonts.poppins(
-          fontWeight: FontWeight.w500,
-          fontSize: 14,
-          color: const Color(0xFF42505C),
-        ),
-        displaySmall: GoogleFonts.poppins(
-          fontSize: 10,
-          fontWeight: FontWeight.w400,
-          color: const Color(0xFF79828B),
-        ),
-        titleSmall: GoogleFonts.poppins(
-          fontWeight: FontWeight.w300,
-          fontSize: 13,
-          color: const Color(0xFF42505C),
-        )),
+      titleLarge: GoogleFonts.exo(
+          fontSize: 22, fontWeight: FontWeight.w500, color: Colors.white),
+      bodyLarge: GoogleFonts.poppins(
+        fontSize: 22,
+        fontWeight: FontWeight.w700,
+      ),
+      bodySmall: GoogleFonts.exo(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+      ),
+      displayLarge: GoogleFonts.poppins(
+        fontSize: 24,
+        fontWeight: FontWeight.w700,
+        color: const Color(0xFF303030),
+      ),
+      displayMedium: GoogleFonts.poppins(
+        fontWeight: FontWeight.w500,
+        fontSize: 14,
+        color: const Color(0xFF42505C),
+      ),
+      displaySmall: GoogleFonts.poppins(
+        fontSize: 10,
+        fontWeight: FontWeight.w400,
+        color: const Color(0xFF79828B),
+      ),
+      titleSmall: GoogleFonts.poppins(
+        fontWeight: FontWeight.w300,
+        fontSize: 13,
+        color: const Color(0xFF42505C),
+      ),
+      headlineSmall: GoogleFonts.inter(
+        fontSize: 13,
+        fontWeight: FontWeight.w400,
+        color: const Color(0xFFA3A3A3),
+      ),
+    ),
   );
 }
