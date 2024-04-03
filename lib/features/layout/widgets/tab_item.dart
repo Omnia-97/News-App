@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/network/remote/api_manager.dart';
+import 'package:news_app/features/bloc/cubit.dart';
 import 'package:news_app/features/layout/widgets/one_article_widget.dart';
 import 'package:news_app/features/layout/widgets/source_item.dart';
 
-import '../../../models/SourceResponse.dart';
-
 class TabItem extends StatefulWidget {
-  final List<Sources> sources;
   final String searchQuery;
 
   const TabItem({
     super.key,
-    required this.sources,
     required this.searchQuery,
   });
 
@@ -20,8 +16,6 @@ class TabItem extends StatefulWidget {
 }
 
 class _TabItemState extends State<TabItem> {
-  int selectedIndex = 0;
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -32,7 +26,7 @@ class _TabItemState extends State<TabItem> {
         Padding(
           padding: const EdgeInsetsDirectional.only(start: 12),
           child: DefaultTabController(
-            length: widget.sources.length,
+            length: HomeCubit.get(context).sources.length,
             child: TabBar(
               padding: EdgeInsets.zero,
               indicatorPadding: EdgeInsets.zero,
@@ -42,54 +36,35 @@ class _TabItemState extends State<TabItem> {
               indicatorColor: Colors.transparent,
               dividerColor: Colors.transparent,
               onTap: (value) {
-                selectedIndex = value;
+                HomeCubit.get(context).changeSelectedIndex(value);
                 setState(() {});
               },
-              tabs: widget.sources
+              tabs: HomeCubit.get(context)
+                  .sources
                   .map(
                     (e) => SourceItem(
-                        selected: widget.sources.elementAt(selectedIndex) == e,
+                        selected: HomeCubit.get(context).sources.elementAt(
+                                HomeCubit.get(context).selectedIndex) ==
+                            e,
                         source: e),
                   )
                   .toList(),
             ),
           ),
         ),
-        FutureBuilder(
-          future: ApiManager.getNewsData(
-            widget.sources[selectedIndex].id ?? '',
-            widget.searchQuery,
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return OneArticle(
+                  article: HomeCubit.get(context).articles[index],
+                );
+              },
+              itemCount: HomeCubit.get(context).articles.length,
+            ),
           ),
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(
-                child: CircularProgressIndicator(
-                  color: Color(0xFF39A552),
-                ),
-              );
-            }
-            if (snapshot.hasError) {
-              return const Center(
-                child: Text('SomeThing went wrong'),
-              );
-            }
-            var articles = snapshot.data?.articles ?? [];
-            return Expanded(
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                child: ListView.builder(
-                  itemBuilder: (context, index) {
-                    return OneArticle(
-                      article: articles[index],
-                    );
-                  },
-                  itemCount: articles.length,
-                ),
-              ),
-            );
-          },
-        )
+        ),
       ],
     );
   }
