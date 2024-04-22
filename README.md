@@ -21,12 +21,14 @@ This project is your gateway to a dynamic news experience, offering users access
      git clone https://github.com/Omnia-97/News-App.git
 
 3. **Install Dependencies:** Navigate to the project directory and install the necessary dependencies using Flutter's package manager:
+
     flutter pub get
    
-4. **Run the App:** Launch the app on your preferred emulator or physical device using the following command:
+5. **Run the App:** Launch the app on your preferred emulator or physical device using the following command:
+ 
      flutter run
 
-5. **Explore and Enjoy:** Once the app is running, explore its features, search for news articles, and stay updated on the latest happenings from around the world!
+7. **Explore and Enjoy:** Once the app is running, explore its features, search for news articles, and stay updated on the latest happenings from around the world!
 
 ## Contributing:
 
