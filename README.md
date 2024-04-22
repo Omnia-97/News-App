@@ -17,7 +17,7 @@ This project is your gateway to a dynamic news experience, offering users access
 ## How to Use:
 
 1. **Clone the Repository:** Begin by cloning this repository to your local machine using the following command:
-    git clone https://github.com/Omnia-97/flutter-news-app .git
+     git clone https://github.com/Omnia-97/News-App.git
 
 2. **Install Dependencies:** Navigate to the project directory and install the necessary dependencies using Flutter's package manager:
     flutter pub get
