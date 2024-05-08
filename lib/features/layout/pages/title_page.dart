@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/widgets/custom_background_widget.dart';
 import 'package:news_app/models/NewsDataModel.dart';
+import 'package:readmore/readmore.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import '../../../core/configs/constants.dart';
@@ -78,34 +80,70 @@ class TitlePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
+              /* SizedBox(
+                width: 381.w,
+                height: 70.h,
+                child: SingleChildScrollView(
+                  child: ReadMoreText(
+                    product.description ?? "",
+                    style: Styles.categoryText.copyWith(
+                      color: AppColors.textColor.withOpacity(0.6),
+                    ),
+                    trimMode: TrimMode.Line,
+                    trimLines: 3,
+                    colorClickableText: AppColors.primaryColor,
+                    trimExpandedText: ' Read less',
+                    trimCollapsedText: 'Read more',
+                    moreStyle: Styles.categoryText,
+                  ),
+                ),
+              ),*/
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15),
+                padding: EdgeInsets.symmetric(horizontal: 15.w),
                 child: Container(
-                  width: 383,
+                  height: 300.h,
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.circular(25),
+                    borderRadius: BorderRadius.circular(25.r),
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 30),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 30),
-                          child: Text(
-                            title.description ?? "",
-                            style: Constants.theme.textTheme.titleSmall,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Padding(
+                        padding:
+                            EdgeInsets.only(top: 24.h, left: 11.w, right: 12.w),
+                        child: SizedBox(
+                          height: 140.h,
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.vertical,
+                            child: ReadMoreText(
+                              title.description ?? "",
+                              style: Constants.theme.textTheme.displayMedium!.copyWith(
+                                fontWeight: FontWeight.w300,
+                              ),
+                              trimMode: TrimMode.Line,
+                              trimLines: 5,
+                              colorClickableText: Constants.primaryColor,
+                              trimExpandedText: ' Read less',
+                              trimCollapsedText: 'Read more',
+                              moreStyle: Constants.theme.textTheme.titleSmall!.copyWith(
+                                color: Constants.primaryColor,
+                              ),
+                            ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 210, right: 46),
-                          child: Text(
-                            'View Full Article',
-                            style: Constants.theme.textTheme.displayMedium,
-                          ),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(228, 0.h, 30.w, 0),
+                        child: Text(
+                          'View Full Article',
+                          style: Constants.theme.textTheme.displayMedium,
                         ),
-                        InkWell(
+                      ),
+                      Align(
+                        alignment: Alignment.topRight,
+                        child: InkWell(
                           onTap: () async {
                             final Uri url =
                                 Uri.parse(title.url ?? "https://flutter.dev");
@@ -123,9 +161,9 @@ class TitlePage extends StatelessWidget {
                               size: 22,
                             ),
                           ),
-                        )
-                      ],
-                    ),
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),
