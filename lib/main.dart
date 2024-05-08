@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/configs/app_theme_manager.dart';
 import 'package:news_app/core/configs/pages_route_name.dart';
 import 'package:news_app/core/configs/routes.dart';
@@ -27,15 +28,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
-    return MaterialApp(
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale(provider.languageCode),
-      debugShowCheckedModeBanner: false,
-      navigatorKey: navigatorKey,
-      initialRoute: PageRouteName.initial,
-      onGenerateRoute: Routes.onGenerateRoute,
-      theme: AppThemeManager.applicationThemeData,
+    return ScreenUtilInit(
+      designSize: const Size(412, 870),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        locale: Locale(provider.languageCode),
+        debugShowCheckedModeBanner: false,
+        navigatorKey: navigatorKey,
+        initialRoute: PageRouteName.initial,
+        onGenerateRoute: Routes.onGenerateRoute,
+        theme: AppThemeManager.applicationThemeData,
+      ),
     );
   }
 }

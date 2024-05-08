@@ -4,15 +4,15 @@ import 'package:google_fonts/google_fonts.dart';
 class AppThemeManager {
   static ThemeData applicationThemeData = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
-    primaryColor: const Color(0xFF39A552),
+    primaryColor: const Color(0xFF0e5c6d),
     appBarTheme: const AppBarTheme(
-        toolbarHeight: 67,
-        backgroundColor: Color(0xFF39A552),
+        toolbarHeight: 60,
+        backgroundColor: Color(0xFF0e5c6d),
         centerTitle: true,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(35),
-            bottomRight: Radius.circular(35),
+            bottomLeft: Radius.circular(25),
+            bottomRight: Radius.circular(25),
           ),
         ),
         shadowColor: Colors.transparent),

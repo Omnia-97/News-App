@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/configs/constants.dart';
 import 'package:news_app/core/widgets/custom_background_widget.dart';
 import 'package:news_app/features/layout/pages/category_page.dart';
@@ -23,12 +24,12 @@ class _HomeScreenState extends State<HomeScreen> {
       id: 'sports',
       title: 'Sports',
       image: 'assets/images/sports.png',
-      backgroundColor: Color(0xFFC91C22),
+      backgroundColor: Color(0xFF000000),
     ),
     CategoryModel(
       id: 'general',
       title: 'Politics',
-      image: 'assets/images/Politics.png',
+      image: 'assets/images/politics.png',
       backgroundColor: Color(0xFF003E90),
     ),
     CategoryModel(
@@ -40,13 +41,13 @@ class _HomeScreenState extends State<HomeScreen> {
     CategoryModel(
       id: 'business',
       title: 'Business',
-      image: 'assets/images/bussines.png',
+      image: 'assets/images/business.png',
       backgroundColor: Color(0xFFCF7E48),
     ),
     CategoryModel(
       id: 'entertainment',
-      title: 'Environment',
-      image: 'assets/images/environment.png',
+      title: 'Entertainment',
+      image: 'assets/images/entertainment.png',
       backgroundColor: Color(0xFF4882CF),
     ),
     CategoryModel(
@@ -72,10 +73,10 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
         appBar: isSearching
             ? AppBar(
-                leadingWidth: 80,
+                leadingWidth: 80.w,
                 title: SizedBox(
-                    width: 350,
-                    height: 60,
+                    width: 350.w,
+                    height: 60.h,
                     child: CustomTextFormField(
                       onChanged: (value) {
                         setState(() {
@@ -90,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     )),
               )
             : AppBar(
-                leadingWidth: 80,
+                leadingWidth: 80.w,
                 iconTheme: const IconThemeData(size: 35),
                 title: settingView
                     ? Text(
@@ -106,11 +107,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 actions: [
                   if (selectedCategory != null && settingView == false)
                     InkWell(
-                      child: const Padding(
+                      child: Padding(
                         padding: EdgeInsets.symmetric(
-                          horizontal: 28,
+                          horizontal: 28.w,
                         ),
-                        child: ImageIcon(
+                        child: const ImageIcon(
                           AssetImage(
                             'assets/icons/ic_search.png',
                           ),
@@ -142,9 +143,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                         Expanded(
                           child: GridView.builder(
-                            padding: const EdgeInsets.symmetric(
-                              vertical: 20,
-                              horizontal: 20,
+                            padding: EdgeInsets.symmetric(
+                              vertical: 20.h,
+                              horizontal: 20.w,
                             ),
                             gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(

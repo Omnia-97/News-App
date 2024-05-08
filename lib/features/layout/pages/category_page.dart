@@ -50,9 +50,10 @@ class CategoryView extends StatelessWidget {
             );
           } else {
             return CustomBackgroundWidget(
-                child: TabItem(
-              searchQuery: searchQuery,
-            ));
+              child: TabItem(
+                searchQuery: searchQuery,
+              ),
+            );
           }
         },
       ),

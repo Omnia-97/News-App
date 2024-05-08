@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news_app/core/configs/constants.dart';
 import 'package:news_app/models/category_model.dart';
 
@@ -31,20 +32,20 @@ class CategoryItemWidget extends StatelessWidget {
             bottomRight:
                 index % 2 == 0 ? const Radius.circular(25) : Radius.zero,
           ),
+          image: DecorationImage(image: AssetImage(categoryModel.image) ,
+            fit: BoxFit.cover,)
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Image.asset(
-              categoryModel.image,
-              fit: BoxFit.cover,
-            ),
-            Text(
-              categoryModel.title,
-              style: Constants.theme.textTheme.titleLarge,
-            ),
-          ],
+        child: Padding(
+          padding:  EdgeInsets.only(top: 153.h),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                categoryModel.title,
+                style: Constants.theme.textTheme.titleLarge,
+              ),
+            ],
+          ),
         ),
       ),
     );

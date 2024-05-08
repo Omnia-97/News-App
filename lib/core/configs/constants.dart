@@ -5,6 +5,6 @@ class Constants {
   static var theme = Theme.of(navigatorKey.currentState!.context);
   static var mediaQuery = MediaQuery.of(navigatorKey.currentState!.context);
   static String baseURl = 'newsapi.org';
-  static String apiKeyValue = 'd629e941c1de4b81b1ec4d816b6b0074';
-  static const Color primaryColor = Color(0xFF39A552);
+  static String apiKeyValue = '28d014269c5e4fe3add1ec43dca1ec14';
+  static const Color primaryColor = Color(0xFF0e5c6d);
 }
