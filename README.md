@@ -1,4 +1,4 @@
-# Flutter News App Project 📰
+# News App 📰
 
 This project is your gateway to a dynamic news experience, offering users access to news of all kinds. Whether you're interested in politics, sports, technology, or entertainment, this app has you covered! 🌟
 
