@@ -38,7 +38,7 @@ We welcome contributions from developers of all skill levels! If you'd like to c
 
 ## ScreenShots 📸 
 <div style="display: flex; justify-content: space-between;">
-    <img src=https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/splash.png" height="400">
+    <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/splash.png" height="400">
     <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/home_category.png" height="400">
     <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/news_screen.png" height="400">
     <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/title_screen.png" height="400">
