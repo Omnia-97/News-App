@@ -36,6 +36,19 @@ This project is your gateway to a dynamic news experience, offering users access
 
 We welcome contributions from developers of all skill levels! If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Together, we can make this app even better! 🚀
 
+## ScreenShots 📸 
+<div style="display: flex; justify-content: space-between;">
+    <img src=https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/splash.png" height="400">
+    <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/home_category.png" height="400">
+    <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/news_screen.png" height="400">
+    <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/title_screen.png" height="400">
+</div>
+
+<div style="display: flex; justify-content: space-between; margin-top: 25px;">
+        <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/setting.png" height="400">
+       <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/setting2.png" height="400">
+</div>
+
 ## Credits 🙌
 
 This project was made possible thanks to the amazing contributions of developers like you, as well as the following technologies:
