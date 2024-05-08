@@ -2,7 +2,7 @@
 
 This project is your gateway to a dynamic news experience, offering users access to news of all kinds. Whether you're interested in politics, sports, technology, or entertainment, this app has you covered! 🌟
 
-## Features:
+## Features 🚀
 
 🔍 **Search Functionality:** Users can easily search for news articles using keywords, filtering by category or searching across all categories.
 
@@ -13,6 +13,8 @@ This project is your gateway to a dynamic news experience, offering users access
 👁️ **Observer Pattern:** By implementing the observer pattern, we've enabled our app to react dynamically to changes in data, providing users with up-to-date information at all times.
 
 🔌 **Provider:** We've utilized the Provider package to manage app-wide state and dependency injection, ensuring clean and maintainable code.
+
+📱 Responsive Design: The app is responsive across devices, ensuring a consistent and optimized experience on mobile screens.
 
 ## How to Use:
 
@@ -30,11 +32,11 @@ This project is your gateway to a dynamic news experience, offering users access
 
 7. **Explore and Enjoy:** Once the app is running, explore its features, search for news articles, and stay updated on the latest happenings from around the world!
 
-## Contributing:
+## Contributing 🤝
 
 We welcome contributions from developers of all skill levels! If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Together, we can make this app even better! 🚀
 
-## Credits:
+## Credits 🙌
 
 This project was made possible thanks to the amazing contributions of developers like you, as well as the following technologies:
 
