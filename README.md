@@ -44,7 +44,7 @@ We welcome contributions from developers of all skill levels! If you'd like to c
     <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/title_screen.png" height="400">
 </div>
 
-<div style="display: flex; justify-content: space-between; margin-top: 25px;">
+<div style="display: flex; justify-content: space-between; margin-top: 30px;">
        <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/search.png" height="400">
        <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/setting.png" height="400">
        <img src="https://github.com/Omnia-97/News-App/blob/master/assets/screen_shots/setting2.png" height="400">
