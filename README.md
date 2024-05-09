@@ -4,17 +4,17 @@ This project is your gateway to a dynamic news experience, offering users access
 
 ## Features 🚀
 
-🔍 **Search Functionality:** Users can easily search for news articles using keywords, filtering by category or searching across all categories.
+- 🔍 **Search Functionality:** Users can easily search for news articles using keywords, filtering by category or searching across all categories.
 
-📊 **REST APIs and JSON:** We've integrated news APIs to fetch the latest updates from various sources, ensuring that our users stay informed in real-time.
+- 📊 **REST APIs and JSON:** We've integrated news APIs to fetch the latest updates from various sources, ensuring that our users stay informed in real-time.
 
-🧩 **State Management:** Leveraging the power of Cubit state management, we've ensured a smooth and efficient user experience, with minimal performance overhead.
+- 🧩 **State Management:** Leveraging the power of Cubit state management, we've ensured a smooth and efficient user experience, with minimal performance overhead.
 
-👁️ **Observer Pattern:** By implementing the observer pattern, we've enabled our app to react dynamically to changes in data, providing users with up-to-date information at all times.
+- 👁️ **Observer Pattern:** By implementing the observer pattern, we've enabled our app to react dynamically to changes in data, providing users with up-to-date information at all times.
 
-🔌 **Provider:** We've utilized the Provider package to manage app-wide state and dependency injection, ensuring clean and maintainable code.
+- 🔌 **Provider:** We've utilized the Provider package to manage app-wide state and dependency injection, ensuring clean and maintainable code.
 
-📱 **Responsive Design:** The app is responsive across devices, ensuring a consistent and optimized experience on mobile screens.
+- 📱 **Responsive Design:** The app is responsive across devices, ensuring a consistent and optimized experience on mobile screens.
 
 ## How to Use:
 
